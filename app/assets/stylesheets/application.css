@@ -174,3 +174,6 @@
     border-color: buttonborder;
     border-image: initial;
    }
+   .notice {
+    color: green;
+   }

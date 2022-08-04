@@ -1,2 +1,26 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+   <link rel="stylesheet" media="all" href="/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css" data-turbolinks-track="reload">
+   <script src="/assets/application-114264dd93c8ff30e4335b71eed7949d66c4e7a8eb62e2de6284c046fe07104b.js" data-turbolinks-track="reload"></script>
+  <title>WebCampBackendNew</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="m/9tppE5qMpvtEluJ6iMRJX5Q40Xqgb2AMDrP/w27BmVCwkKSDjJpMUKtkx3rI9vxcLMLccsjsvWS9SP5kRqRQ=="></head>
+
+  <body>
+    <p id="notice"></p>
+   <h1>Editing Book</h1>
+    <%= form_with model: @book, url:book_path(@book.id), method: :patch do |book| %>
+
+   <h4>Title</h4>
+    <%= book.text_field :title %>
+
+   <h4>Body</h4>
+    <%= book.text_area :body %>
+
+  <%= book.submit 'Update Book' %>
+  <%= link_to "Show", book_path(@book.id) %>
+  |
+  <%= link_to "Back", '/books' %>
+  </body>
+
+ <% end %>
+ </html>
